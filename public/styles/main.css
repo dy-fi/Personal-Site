@@ -2,3 +2,7 @@ body {
     background-image: url("../resources/mojave_background.jpg")
 }
 
+#index-terminal {
+    margin: auto;
+    margin-top: 15%;
+}

@@ -1,48 +1,19 @@
 <div id='index-terminal'></div>
-
-
 <div class="modal fade" id="email-modal" tabindex="-1" role="dialog" aria-labelledby="ModalLabel" aria-hidden="true">
-  <div class="modal-dialog" role="document">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="email-modal-label">Contact Me</h5>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
-      </div>
-      <div class="modal-body">
-          For business inquires
-      </div>
-      <div class="modal-footer">
-        {{{email-form}}}
-      </div>
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="email-modal-label">Contact Me</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                {{>email-form}}
+            </div>
+            <div class="modal-footer">
+                For business inquires
+            </div>
+        </div>
     </div>
-  </div>
 </div>
-
-<script>
-
-    func goURL(path) {
-        return window.location.replace(window.location.origin + "/" + path)
-    }
-
-    jQuery(function($, undefined) {
-        $('#index-terminal').terminal({
-            make-portfolio: function() {
-                window.location.replace("https://www.makeschool.com/portfolio/Dylan-Finn")
-            }
-
-            portfolio: function() {
-                this.echo("Placeholder portfolio")
-            } 
-
-            projects: function() {
-                goURL("projects")
-            }
-
-            contact: {
-                $('#email-modal').modal('show');
-            }
-        })
-    })
-</script>
