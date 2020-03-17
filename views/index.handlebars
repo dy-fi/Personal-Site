@@ -1,3 +1,4 @@
+<div id="macbar-terminal">~~dylanfinn@Dylan's-Hackbook-Pro~~</div>
 <div id='index-terminal'></div>
 <div class="modal fade" id="email-modal" tabindex="-1" role="dialog" aria-labelledby="ModalLabel" aria-hidden="true">
     <div class="modal-dialog" role="document">
@@ -17,3 +18,80 @@
         </div>
     </div>
 </div>
+
+{{#section 'script'}}
+    <script>
+
+        var table = `
+Hey, I'm Dylan, a crazy passionate software engineer.  You can find everything you need to know about\nmy work through this terminal!
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n
+        COMMAND             Description
+        ----------------|--------------------------
+        help (or h)     |     bring this table up again\n
+        contact         |     email module\n
+        porfolio        |     my personal portfolio\n
+        ms_portfolio    |     my portfolio from Make School\n
+        projects        |     my personal and professional software projects\n
+        about           |     About the author\n
+        home            |     Beam me up Scotty!\n
+        + some super secret cheat codes!
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n
+For those who aren't familiar with the terminal, just type the command you want!`
+
+        var help = `
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n
+        COMMAND             Description
+        ----------------|--------------------------
+        help (or h)     |     bring this table up again
+        contact         |     email module\n
+        porfolio        |     my personal portfolio\n
+        ms_portfolio    |     My portfolio from Make School\n
+        projects        |     My personal and professional software projects\n
+        about           |     About the author\n
+        home            |     Beam me up Scotty!\n
+        + some super secret cheat codes!
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n
+        `
+
+        var about = ``
+
+        function goURL(path) {
+            return window.location.replace(window.location.origin + "/" + path)
+        }
+
+        jQuery(function($, undefined) {
+            $('#index-terminal').terminal({
+                ms_portfolio: function() {
+                    window.location.replace("https://www.makeschool.com/portfolio/Dylan-Finn");
+                },
+    
+                portfolio: function() {
+                    this.echo("My portfolio page placeholder");
+                },
+    
+                projects: function() {
+                    goURL("projects");
+                },
+    
+                contact: function() {
+                    $('#email-modal').modal('show');
+                },
+
+                help: function() {
+                    this.echo(help);
+                },
+
+                h: function() {
+                    this.echo(help);
+                },
+            }, {
+                greetings: table,
+                name: 'Name placeholder',
+                height: 600,
+                width: 800,
+                prompt: '# ~> '
+            })
+        })
+
+    </script>
+{{/section}}

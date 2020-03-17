@@ -26,39 +26,8 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.terminal/2.15.1/js/jquery.terminal.min.js"></script>
     <script src='/scripts/main.js' type='text/javascript'></script>
     <script src="https://unpkg.com/js-polyfills@0.x.x/keyboard.js"></script>
-    <script>
-        function goURL(path) {
-            return window.location.replace(window.location.origin + "/" + path)
-        }
-
-        jQuery(function($, undefined) {
-            $('#index-terminal').terminal({
-                MakePortfolio: function() {
-                    window.location.replace("https://www.makeschool.com/portfolio/Dylan-Finn");
-                },
+    {{{_sections.script}}}
     
-                portfolio: function() {
-                    this.echo("Placeholder portfolio");
-                },
-    
-                projects: function() {
-                    goURL("projects");
-                },
-    
-                contact: function() {
-                    $('#email-modal').modal('show');
-                },
-            }, {
-                greetings: 'Greeting placeholder',
-                name: 'Name placeholder',
-                height: 600,
-                width: 800,
-                prompt: '# ~> '
-            })
-        })
-
-
-    </script>
     
   </body>
 </html>

@@ -24,7 +24,19 @@ port = process.env.PORT || 5000;
 // app.use(favicon(__dirname + '/public/resources/favicon.ico'));
 
 // Express handlebars
-app.engine('handlebars', exphbs());
+
+var handlebars = exphbs.create({
+    defaultLayout: "main",
+    helpers: {
+      section: function(name, options) { 
+        if (!this._sections) this._sections = {};
+          this._sections[name] = options.fn(this); 
+          return null;
+        }
+    }    
+});
+
+app.engine('handlebars', handlebars.engine);
 app.set('view engine', 'handlebars');
 
 

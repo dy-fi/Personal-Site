@@ -3,6 +3,22 @@ body {
 }
 
 #index-terminal {
-    margin: auto;
-    margin-top: 15%;
+    margin-top: 8%;
+    margin-left: -10%;
+}
+
+#macbar-terminal {
+    background-color: slategray;
+    text-align: center;
+    margin-left: -111px;
+    margin-top: -1%;
+    position: absolute;
+    width: 800px;
+    height: 23px;
+    font-size: 12px;
+}
+
+#utility-button {
+    position: relative;
+    
 }
