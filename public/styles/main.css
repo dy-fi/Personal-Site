@@ -1,24 +1,33 @@
 body {
-    background-image: url("../resources/mojave_background.jpg")
+    background-image: url("../images/mojave_background.jpg")
 }
 
 #index-terminal {
     margin-top: 8%;
     margin-left: -10%;
+    opacity: 0.8;
+    resize: both;
+    overflow: auto;
 }
 
-#macbar-terminal {
+#index-macbar {
     background-color: slategray;
     text-align: center;
     margin-left: -111px;
     margin-top: -1%;
     position: absolute;
     width: 800px;
-    height: 23px;
+    height: 16px;
     font-size: 12px;
 }
 
-#utility-button {
-    position: relative;
-    
+.icon-image {
+    border-radius: 20px;
+}
+
+.icon-button {
+    text-align: center;
+    margin-left: 77%;
+    position: absolute;
+    color: black;
 }

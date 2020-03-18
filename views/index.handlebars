@@ -1,5 +1,24 @@
-<div id="macbar-terminal">~~dylanfinn@Dylan's-Hackbook-Pro~~</div>
+<div id="index-macbar">~~dylanfinn@Dylan's-Hackbook-Pro~~</div>
 <div id='index-terminal'></div>
+
+<a href="https://www.linkedin.com/in/dylan-finn-a36b9614b/" class="icon-button" style="margin-top:-42%;">
+    <img src="../images/linkedin-icon.png" alt="LinkedIn profile link" class="icon-image" height="90px" width="90px" style="border-radius:20px; margin-top:-1%;">
+    <br>
+    <small class="icon-label">LinkedIn</small>
+</a>
+
+<a href="https://www.github.com/dy-fi" class="icon-button" style="margin-top:-32%;">
+    <img src="../images/Github-Mark.png" alt="Github profile link" height="90px" width="90px" style="border-radius:20px;">
+    <br>
+    <small class="icon-label">Github</small>
+</a>
+
+
+
+
+
+
+
 <div class="modal fade" id="email-modal" tabindex="-1" role="dialog" aria-labelledby="ModalLabel" aria-hidden="true">
     <div class="modal-dialog" role="document">
         <div class="modal-content">
@@ -21,22 +40,33 @@
 
 {{#section 'script'}}
     <script>
+        var banner = `
+ ____             ___                        ____                           
+\/\\  _\`\\          \/\\_ \\                      \/\\  _\`\\   __                    
+\\ \\ \\\/\\ \\  __  __\\\/\/\\ \\      __      ___    \\ \\ \\L_\\\/\\_\\    ___     ___    
+ \\ \\ \\ \\ \\\/\\ \\\/\\ \\ \\ \\ \\   \/'__\`\\  \/' _ \`\\   \\ \\  _\\\/\\\/\\ \\ \/' _ \`\\ \/' _ \`\\  
+  \\ \\ \\_\\ \\ \\ \\_\\ \\ \\_\\ \\_\/\\ \\L\\.\\_\/\\ \\\/\\ \\   \\ \\ \\\/  \\ \\ \\\/\\ \\\/\\ \\\/\\ \\\/\\ \\ 
+   \\ \\____\/\\\/\`____ \\\/\\____\\ \\__\/.\\_\\ \\_\\ \\_\\   \\ \\_\\   \\ \\_\\ \\_\\ \\_\\ \\_\\ \\_\\
+    \\\/___\/  \`\/___\/&gt; \\\/____\/\\\/__\/\\\/_\/\\\/_\/\\\/_\/    \\\/_\/    \\\/_\/\\\/_\/\\\/_\/\\\/_\/\\\/_\/
+               \/\\___\/                                                       
+               \\\/__\/ `
 
         var table = `
+
 Hey, I'm Dylan, a crazy passionate software engineer.  You can find everything you need to know about\nmy work through this terminal!
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n
         COMMAND             Description
         ----------------|--------------------------
-        help (or h)     |     bring this table up again\n
-        contact         |     email module\n
-        porfolio        |     my personal portfolio\n
-        ms_portfolio    |     my portfolio from Make School\n
-        projects        |     my personal and professional software projects\n
+        help (or h)     |     Bring this table up again\n
+        contact         |     Email modal\n
+        porfolio        |     My personal portfolio\n
+        ms_portfolio    |     My portfolio from Make School\n
+        projects        |     My personal and professional software projects\n
         about           |     About the author\n
         home            |     Beam me up Scotty!\n
         + some super secret cheat codes!
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n
-For those who aren't familiar with the terminal, just type the command you want!`
+For those who aren't familiar with the terminal, just type the command you want! \nThis terminal is also resizable for your convenience.`
 
         var help = `
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n
@@ -53,7 +83,11 @@ For those who aren't familiar with the terminal, just type the command you want!
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n
         `
 
-        var about = ``
+        var about = `
+Name: Dylan Finn\n
+Title: Software Engineer (specialization in backend)\n
+Bio
+        `
 
         function goURL(path) {
             return window.location.replace(window.location.origin + "/" + path)
@@ -63,6 +97,10 @@ For those who aren't familiar with the terminal, just type the command you want!
             $('#index-terminal').terminal({
                 ms_portfolio: function() {
                     window.location.replace("https://www.makeschool.com/portfolio/Dylan-Finn");
+                },
+
+                about: function() {
+                    this.echo(about);
                 },
     
                 portfolio: function() {
@@ -85,12 +123,16 @@ For those who aren't familiar with the terminal, just type the command you want!
                     this.echo(help);
                 },
             }, {
-                greetings: table,
+                greetings: banner + "\n" + table,
                 name: 'Name placeholder',
                 height: 600,
                 width: 800,
                 prompt: '# ~> '
             })
+        })
+
+        $('#index-terminal').watch('width', function(propName, oldVal, newVal) {
+            $('#index-macbar').width(newVal);
         })
 
     </script>
