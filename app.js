@@ -43,7 +43,7 @@ app.set('view engine', 'handlebars');
 // static scripts and styles in public
 app.use(express.static('public'));
 
-app.use(morgan('tiny'));
+app.use(morgan(':status :method :url :res[content-length] - :response-time ms'));
 
 // MIDDLEWARE body parser
 app.use(bodyParser.urlencoded({ extended: true }));

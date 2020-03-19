@@ -2,17 +2,36 @@
 <div id='index-terminal'></div>
 
 <a href="https://www.linkedin.com/in/dylan-finn-a36b9614b/" class="icon-button" style="margin-top:-42%;">
-    <img src="../images/linkedin-icon.png" alt="LinkedIn profile link" class="icon-image" height="75px" width="75px" style="border-radius:20px; margin-top:-1%;">
+    <img src="../images/linkedin-icon.png" alt="LinkedIn profile link" class="icon-image" style="margin-top:-1%;">
     <br>
-    <small class="icon-label">LinkedIn</small>
+    <small>LinkedIn</small>
 </a>
 
 <a href="https://www.github.com/dy-fi" class="icon-button" style="margin-top:-34%;">
-    <img src="../images/Github-Mark.png" alt="Github profile link" height="75px" width="75px" style="border-radius:20px;">
+    <img src="../images/Github-Mark.png" alt="Github profile link" class="icon-image">
     <br>
-    <small class="icon-label">Github</small>
+    <small>Github</small>
 </a>
 
+<a href="../images/resume.pdf" class="icon-button" style="margin-top:-26%" download>
+    <img src="../images/resume_icon.png" alt="Resume dowload link" class="icon-image" style="background-color:darkblue">
+    <br>
+    <small>Resume.pdf</small>
+</a>
+
+<a href="codesnatch.io" class="icon-button" style="margin-top: -18%">
+    <img src="../images/camera_icon.png" alt="Codesnatch.io Link" class="icon-image">
+    <br>
+    <small>Codesnatch</small>
+</a>
+
+<div id="sticky-macbar">
+    <button id="sticky-button" onclick=""></button>
+</div>
+<div id="sticky">
+    <p id="sticky-text"><a>I specialize in backend web and this website was my attempt at a nicer frontend.<br>As always, my approach was design, and then decide the best tech to help me get there.  I hope you enjoy, and please send me any feedback you have about it!</a></p>
+    <p><span id="sticky-type" readonly></span></p>
+</div>
 
 
 
@@ -38,18 +57,27 @@
     </div>
 </div>
 
+
 {{#section 'script'}}
+    <script src='https://cdn.jsdelivr.net/npm/typed.js@2.0.9'></script>
     <script>
+        var typed = new Typed('#sticky-type', {
+            stringsElement: '#sticky-text',
+            typeSpeed: 30,
+            showCursor: true,
+        });
+
         var banner = `
  ____             ___                        ____                           
 \/\\  _\`\\          \/\\_ \\                      \/\\  _\`\\   __                    
-\\ \\ \\\/\\ \\  __  __\\\/\/\\ \\      __      ___    \\ \\ \\L_\\\/\\_\\    ___     ___    
+\\ \\ \\\/\\ \\  __  __\\\/\/\\ \\      __      ___    \\ \\ \\L_\\\ /\\_\\    ___     ___    
  \\ \\ \\ \\ \\\/\\ \\\/\\ \\ \\ \\ \\   \/'__\`\\  \/' _ \`\\   \\ \\  _\\\/\\\/\\ \\ \/' _ \`\\ \/' _ \`\\  
   \\ \\ \\_\\ \\ \\ \\_\\ \\ \\_\\ \\_\/\\ \\L\\.\\_\/\\ \\\/\\ \\   \\ \\ \\\/  \\ \\ \\\/\\ \\\/\\ \\\/\\ \\\/\\ \\ 
    \\ \\____\/\\\/\`____ \\\/\\____\\ \\__\/.\\_\\ \\_\\ \\_\\   \\ \\_\\   \\ \\_\\ \\_\\ \\_\\ \\_\\ \\_\\
     \\\/___\/  \`\/___\/&gt; \\\/____\/\\\/__\/\\\/_\/\\\/_\/\\\/_\/    \\\/_\/    \\\/_\/\\\/_\/\\\/_\/\\\/_\/\\\/_\/
                \/\\___\/                                                       
                \\\/__\/ `
+
 
         var table = `
 
@@ -65,7 +93,7 @@ Hey, I'm Dylan, a crazy passionate software engineer.  You can find everything y
         about           |     About the author\n
         + some super secret cheat codes!
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n
-For those who aren't familiar with the terminal, just type the command you want! \nThis terminal is also resizable for your convenience.`
+For those who aren't familiar with the terminal, just type the command you want!`
 
         var help = `
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n
