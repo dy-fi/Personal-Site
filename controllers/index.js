@@ -13,9 +13,6 @@ var transporter = nodemailer.createTransport({
 module.exports = (app) => {
     // index
     app.get('/', (req, res) => {    
-        if (req.body.success == "true") {
-            res.render('index', {"message": "email success"})
-        }
         res.render('index', {});
     });
 
@@ -34,7 +31,7 @@ module.exports = (app) => {
             if (err) {
                 console.log(err);
             } else {
-                res.redirect('/?success=true', 200)
+                res.redirect('/', 200)
             }
 
 
