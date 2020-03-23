@@ -96,7 +96,17 @@ body {
     margin-top: 11%;
 }
 
-.icon-label {
+.icon-label-1 {
+    margin-left: 107%;
+    text-align: center;
+}
+
+.icon-label-2 {
+    margin-left: 107.5%;
+    text-align: center;
+}
+
+.icon-label-3 {
     margin-left: 106%;
     text-align: center;
 }

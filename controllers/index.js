@@ -1,12 +1,20 @@
 const express = require('express');
 const figlet = require('figlet');
 const nodemailer = require('nodemailer');
+const xoauth2 = require('xoauth2');
+
+var generator = xoauth2.createXOAuth2Generator({
+    user: "dylan.finn@students.makeschool.com",
+    clientId: process.env.GMAIL_OAUTH_ID,
+    clientSecret: process.env.GMAIL_OAUTH_SECRET,
+    refreshToken: process.env.GMAIL_OAUTH_REFRESH,
+    accessToken: process.env.GMAIL_OAUTH_ACCESS,
+})
 
 var transporter = nodemailer.createTransport({
     service: 'gmail',
     auth: {
-        user: process.env.ADMIN_EMAIL,
-        password: process.env.ADMIN_EMAIL_PASSWORD,
+        xoauth2: generator,
     }
 })
 
@@ -20,6 +28,7 @@ module.exports = (app) => {
         var email = req.body.email
         var subject = req.body.subject
         var content = req.body.content
+
         var mailOptions = {
             from: email,
             to: process.env.ADMIN_EMAIL,
@@ -31,7 +40,7 @@ module.exports = (app) => {
             if (err) {
                 console.log(err);
             } else {
-                res.redirect('/', 200)
+                res.redirect('/', 200);
             }
 
 

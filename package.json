@@ -18,6 +18,7 @@
   "homepage": "https://github.com/dy-fi/Personal-Site#readme",
   "dependencies": {
     "body-parser": "^1.19.0",
+    "cors": "^2.8.5",
     "dotenv": "^8.2.0",
     "express": "^4.17.1",
     "express-handlebars": "^3.1.0",
@@ -25,6 +26,7 @@
     "minimist": "^1.2.5",
     "morgan": "^1.9.1",
     "nodemailer": "^6.4.5",
-    "serve-favicon": "^2.5.0"
+    "serve-favicon": "^2.5.0",
+    "xoauth2": "^1.2.0"
   }
 }
