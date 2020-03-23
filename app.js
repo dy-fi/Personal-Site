@@ -22,7 +22,7 @@ const app = express();
 port = process.env.PORT || 5000;
 
 // favicon
-// app.use(favicon(__dirname + '/public/resources/favicon.ico'));
+app.use(favicon(__dirname + '/public/images/favicon.ico'));
 
 // Express handlebars
 
