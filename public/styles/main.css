@@ -116,18 +116,20 @@ body {
 
 .icon-label-1 {
     margin-left: 107%;
-    margin-top: 1%;
     width: 40px;
     text-align: center;
+    display: block;
 }
 
 .icon-label-2 {
     margin-left: 107.5%;
     text-align: center;
+    display: block;
 }
 
 .icon-label-3 {
     margin-left: 106%;
+    display: block;
     text-align: center;
 }
 
