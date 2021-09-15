@@ -10,13 +10,8 @@ body {
     position: absolute;
 }
 
-#main-pic {
-    height: 100vh;
-    margin: auto;
-}
-
 #index-terminal {
-    margin-top: -52%;
+    margin-top: -72%;
     opacity: 0.8;
     overflow: auto;
 }
@@ -25,10 +20,11 @@ body {
     background-color: slategray;
     text-align: center;
     position: absolute;
-    margin-top: -54%;
+    margin-top: -74%;
     width: 800px;
     height: 16px;
     font-size: 12px;
+    border-bottom: 2px solid gray;
 }
 
 #sticky {
@@ -36,7 +32,10 @@ body {
     height: 300px;
     width: 220px;
     padding: 10px;
-    margin-left: 75%;
+}
+
+#sticky-text {
+    width: 220px;
 }
 
 #sticky-macbar {
@@ -44,9 +43,13 @@ body {
     background-color:#F5EC2E;
     width: 220px;
     height: 16px;
-    margin-left: 75%;
-    margin-top: -40%;
     padding: 2px;
+}
+
+#sticky-wrapper {
+    position: absolute;
+    left: 80%;
+    top: 20%;
 }
 
 #flash-div {
@@ -84,40 +87,40 @@ body {
 
 #terminal-wrapper {
     position: absolute;
-    top: 80%;
+    top: 100%;
 }
 
 .icon-label-1 {
-    margin-left: 107%;
-    width: 40px;
+    margin-left: 10px;
     text-align: center;
     display: block;
 }
 
 .icon-label-2 {
-    margin-left: 107.5%;
+    margin-left: 15px;
     text-align: center;
     display: block;
 }
 
 .icon-label-3 {
-    margin-left: 106%;
     display: block;
     text-align: center;
 }
 
+.icon-label-4 {
+    display: block;
+    margin-left: 12px;
+}
+
 .app-wrapper {
-    margin-top: 10%;
-    padding-bottom: 12%;
-    left: 10%;
     position: relative;
+    margin-top: 10%;
+    left: 25%;
 }
 
 .app-wrapper a {
     text-align: center;
     color: white;
-    margin-left: 106%;
-    padding-bottom: 20px;
 }
 
 .app-wrapper img {
@@ -129,4 +132,10 @@ body {
 .app-wrapper small {
     font-family: -apple-system, BlinkMacSystemFont, sans-serif;
     padding-bottom: 1%;
+}
+
+.button-wrapper {
+    margin-left: 100%;
+    padding-bottom: 25px;
+    text-align: center;
 }

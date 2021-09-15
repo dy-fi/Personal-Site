@@ -1,1 +1,10 @@
-@media screen and (min-width: )
+@media screen and (min-width: 1500px) {
+    .app-wrapper {
+       left: 40%;
+    }
+
+    #index-terminal {
+        width: 1000px;
+        height: 900px;
+    }
+}
