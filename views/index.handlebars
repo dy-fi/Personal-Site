@@ -5,51 +5,51 @@
     </div>
 {{/if}}
 
-<div class="app-wrapper">
-    <a href="https://www.linkedin.com/in/dylan-finn-a36b9614b/" class="icon-button">
-        <img src="../images/linkedin-icon.png" alt="LinkedIn profile link" class="icon-image" style="margin-top:2%;">
-        <small class="icon-label-1">LinkedIn</small>
-    </a>
-</div>
-<div class="app-wrapper">
-    <a href="https://www.github.com/dy-fi" class="icon-button">
-        <img src="../images/GitHub-Mark.png" alt="Github profile link" class="icon-image">
-        <small class="icon-label-2">Github</small>
-    </a>  
-</div>
-<div class="app-wrapper">
-    <a href="../images/resume.pdf" class="icon-button" download>
-        <img src="../images/resume_icon.png" alt="Resume dowload link" class="icon-image" style="background-color:darkblue">
-        <small class="icon-label-3">Resume.pdf</small>
-    </a> 
-</div>
-<div class="app-wrapper">
-    <a href="codesnatch.io" class="icon-button">
-        <img src="../images/camera_icon.png" alt="Codesnatch.io Link" class="icon-image" style="background-color:lightgreen;">
-        <small class="icon-label-3">Codesnatch</small>
-    </a>
+<div id="terminal-wrapper" style="padding:0px;">
+    <div id="terminal-wrapperheader">~~dylanfinn@Dylan's-Hackbook-Pro~~</div>
+    <div id='index-terminal'></div>
 </div>
 
+<!-- BUTTONS -->
+<div class="app-wrapper">
+    <div class="button-wrapper">
+        <a href="https://www.linkedin.com/in/dylan-finn-a36b9614b/">
+            <img src="../images/linkedin-icon.png" alt="LinkedIn profile link" class="icon-image" style="margin-top:2%;">
+            <small class="icon-label-1">LinkedIn</small>
+        </a>
+    </div>
+    
+    <div class="button-wrapper">
+        <a href="https://www.github.com/dy-fi">
+            <img src="../images/GitHub-Mark.png" alt="Github profile link" class="icon-image">
+            <small class="icon-label-2">Github</small>
+        </a>
+    </div>  
+    
+    <div class="button-wrapper">
+        <a href="../images/resume.pdf" download>
+            <img src="../images/resume_icon.png" alt="Resume dowload link" class="icon-image" style="background-color:darkblue">
+            <small class="icon-label-3">Resume.pdf</small>
+        </a> 
+    </div>
+    <div class="button-wrapper">
+        <a>
+            <img src="../images/camera_icon.png" alt="Codesnatch Link" class="icon-image" style="background-color:lightgreen;">
+            <small class="icon-label-3">Coming soon</small>
+        </a>
+    </div>
+</div>
 
 <div id="sticky-macbar">
     {{!-- <button id="sticky-button" onclick=""></button> --}}
 </div>
 
 <div id="sticky">
-    <p id="sticky-text"><a>I specialize in backend web and this website was my attempt at a nicer frontend.<br>As always, my approach was design, and then decide the best tech to help me get there.  I hope you enjoy, and please send me any feedback you have about it!<br> <- Also the terminal is draggable!</a></p>
+    <a>Updates</a>
+    <hr>
+    <p id="sticky-text"><a>Now in Version 2.  Portfolio and mobile site coming soon! <br><br> <- Also the terminal is draggable on larger devices!</a></p>
     <p><span id="sticky-type" readonly></span></p>
 </div>
-
-
-<div id="terminal-wrapper" style="padding:0px;">
-    <div id="terminal-wrapperheader">~~dylanfinn@Dylan's-Hackbook-Pro~~</div>
-    <div id='index-terminal'></div>
-</div>
-
-
-
-
-
 
 <div class="modal fade" id="email-modal" tabindex="-1" role="dialog" aria-labelledby="ModalLabel" aria-hidden="true">
     <div class="modal-dialog" role="document">
@@ -69,8 +69,6 @@
         </div>
     </div>
 </div>
-
-
 
 
 {{#section 'script'}}
@@ -146,8 +144,7 @@ Hey, I'm Dylan, a crazy passionate software engineer.  You can find everything y
         help (or h)     |     Bring this table up again\n
         contact         |     Email modal\n
         portfolio       |     My personal portfolio\n
-        ms_portfolio    |     My portfolio from Make School\n
-        projects        |     My personal and professional software projects\n
+        Github          |     My personal and professional software projects on Github\n
         about           |     About the author\n
         + some super secret cheat codes!
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n
@@ -160,8 +157,7 @@ For those who aren't familiar with the terminal, just type the command you want!
         help (or h)     |     bring this table up again\n
         contact         |     email module\n
         portfolio       |     my personal portfolio\n
-        ms_portfolio    |     My portfolio from Make School\n
-        projects        |     My personal and professional software projects\n
+        Github          |     My personal and professional software projects on Github\n
         about           |     About the author\n
         + some super secret cheat codes!
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n
@@ -214,8 +210,5 @@ Bio
                 prompt: '# ~> '
             })
         })
-
-        
-
     </script>
 {{/section}}

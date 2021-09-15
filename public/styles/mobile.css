@@ -1,0 +1,28 @@
+@media screen and (max-width: 460px) {
+    #terminal-wrapper {
+        position: absolute;
+        top: 330px;
+        left: -10px;
+    }
+
+    #index-terminal {
+        top: 5px;
+        max-width: 575px;
+    }
+
+    .app-wrapper {
+        position: absolute;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap; 
+        padding: 0px;
+        margin: auto;
+        left: -20px;
+        top: 640px;
+    }
+
+    body { background-repeat: no-repeat; }
+    .button-wrapper { padding: 7%; }
+    #terminal-wrapperheader { max-width: 575px; }
+    #sticky-macbar { margin-top: 250%; }
+}
