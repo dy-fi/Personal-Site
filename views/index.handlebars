@@ -14,8 +14,10 @@
     <div id="sticky-macbar"></div>
     <div id="sticky">
         <a>Updates</a>
+        <br>
+        <small styles="text-decoration: muted">v2.1.1</small>
         <hr>
-        <p id="sticky-text"><a>Now in Version 2. Mobile and widescreen responsive<br><br>Roadmap: <br>-Email Module<br>-Portfolio Page</p>
+        <p id="sticky-text"><a>Mobile and widescreen responsive<br><br>Roadmap: <br>-Email Module<br>-Portfolio Page</p>
         <p><span id="sticky-type" readonly></span></p>
     </div>
 </div>
@@ -137,14 +139,14 @@
 
 Hey, I'm Dylan, a crazy passionate software engineer.  You can find everything you need to know about\nmy work through this terminal!
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n
-        COMMAND             Description
+        [[b;#33FF00;]COMMAND]             [[b;#33FF00;]Description]
         ----------------|--------------------------
         help (or h)     |     Bring this table up again\n
         contact         |     Email modal\n
         portfolio       |     My personal portfolio\n
         Github          |     My personal and professional software projects on Github\n
         about           |     About the author\n
-        + some super secret cheat codes!
+        [[bg;#2471A3;]+ some super secret cheat codes!]
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n
 For those who aren't familiar with the terminal, just type the command you want!`
 
@@ -164,7 +166,7 @@ For those who aren't familiar with the terminal, just type the command you want!
         var about = `
 Name: Dylan Finn\n
 Title: Software Engineer (specialization in backend)\n
-Bio
+Bio: A passionate a software engineer with 
         `
 
         function goURL(path) {
@@ -185,12 +187,9 @@ Bio
                     this.echo("Coming soon");
                 },
     
-                projects: function() {
-                    this.echo("Coming")
-                },
-    
                 contact: function() {
-                    $('#email-modal').modal('show');
+                    {{!-- $('#email-modal').modal('show'); --}}
+                    this.echo("Coming soon");
                 },
 
                 help: function() {
