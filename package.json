@@ -2,6 +2,7 @@
   "name": "personal-site",
   "version": "1.0.0",
   "description": "Dylan Finn's personal website",
+  "private": true,
   "main": "app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -13,21 +14,24 @@
     "url": "git+https://github.com/dy-fi/Personal-Site.git"
   },
   "author": "Dylan Finn",
-  "license": "ISC",
   "bugs": {
     "url": "https://github.com/dy-fi/Personal-Site/issues"
   },
   "homepage": "https://github.com/dy-fi/Personal-Site#readme",
   "dependencies": {
-    "body-parser": "^1.19.0",
     "cors": "^2.8.5",
+    "crypto-browserify": "^3.12.0",
+    "css-loader": "^6.3.0",
     "dotenv": "^8.2.0",
     "express": "^4.17.1",
     "express-handlebars": ">=5.3.3",
-    "minimist": "^1.2.5",
-    "morgan": "^1.9.1",
+    "handlebars-loader": "^1.7.1",
     "nodemailer": ">=6.4.16",
+    "path": "^0.12.7",
+    "path-browserify": "^1.0.1",
     "serve-favicon": "^2.5.0",
-    "xoauth2": "^1.2.0"
+    "style-loader": "^3.3.0",
+    "webpack": "^5.57.1",
+    "webpack-cli": "^4.8.0"
   }
 }
