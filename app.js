@@ -4,7 +4,6 @@ require('dotenv').config()
 const express = require('express');
 const favicon = require('serve-favicon')
 const exphbs = require('express-handlebars');
-const bodyParser = require('body-parser');
 const morgan = require('morgan');
 const cors = require('cors');
 
@@ -48,10 +47,6 @@ app.use(morgan(':status :method :url :res[content-length] - :response-time ms'))
 
 // MIDDLEWARE cors
 app.use(cors())
-
-// MIDDLEWARE body parser
-app.use(bodyParser.urlencoded({ extended: true }));
-app.use(bodyParser.json())
 
 // ROUTES
 // controllers

@@ -29,5 +29,8 @@
     "nodemailer": ">=6.4.16",
     "serve-favicon": "^2.5.0",
     "xoauth2": "^1.2.0"
+  },
+  "devDependencies": {
+    "eslint": "^7.32.0"
   }
 }
