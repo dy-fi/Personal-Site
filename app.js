@@ -4,7 +4,7 @@ require('dotenv').config()
 const express = require('express');
 const favicon = require('serve-favicon')
 const exphbs = require('express-handlebars');
-const morgan = require('morgan');
+// const morgan = require('morgan');
 const cors = require('cors');
 
 // // HTTPS
@@ -24,7 +24,6 @@ port = process.env.PORT || 5000;
 app.use(favicon(__dirname + '/public/favicon.ico'));
 
 // Express handlebars
-
 var handlebars = exphbs.create({
     defaultLayout: "main",
     helpers: {
@@ -43,7 +42,7 @@ app.set('view engine', 'handlebars');
 // static scripts and styles in public
 app.use(express.static('public'));
 
-app.use(morgan(':status :method :url :res[content-length] - :response-time ms'));
+// app.use(morgan(':status :method :url :res[content-length] - :response-time ms'));
 
 // MIDDLEWARE cors
 app.use(cors())
