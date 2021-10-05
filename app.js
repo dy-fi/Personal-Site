@@ -7,15 +7,6 @@ const exphbs = require('express-handlebars');
 // const morgan = require('morgan');
 const cors = require('cors');
 
-// // HTTPS
-// const https = require("https"),
-//   fs = require("fs");
-//
-// const options = {
-//   key: fs.readFileSync("SSL/privkey.pem"),
-//   cert: fs.readFileSync("SSL/fullchain.pem")
-// };
-
 // export/environment
 const app = express();
 port = process.env.PORT || 5000;
@@ -37,7 +28,6 @@ var handlebars = exphbs.create({
 
 app.engine('handlebars', handlebars.engine);
 app.set('view engine', 'handlebars');
-
 
 // static scripts and styles in public
 app.use(express.static('public'));
