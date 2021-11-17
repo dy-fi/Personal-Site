@@ -1,0 +1,94 @@
+<div class="portfolio-wrapper">
+    <div class="portfolio-sect" id="summary">
+        <div id="summary-text-wrapper">
+            <h2 id="bio-title">Dylan Finn</h2>
+            
+            <p id="bio-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+            <br>
+            I know languages like...
+            <br>
+            <img src="https://img.shields.io/badge/nginx-%23009639.svg?style=for-the-badge&logo=nginx&logoColor=white">
+            <img src="https://img.shields.io/badge/c++-%2300599C.svg?style=for-the-badge&logo=c%2B%2B&logoColor=white">
+            <img src="https://img.shields.io/badge/go-%2300ADD8.svg?style=for-the-badge&logo=go&logoColor=white">
+            <img src="https://img.shields.io/badge/html5-%23E34F26.svg?style=for-the-badge&logo=html5&logoColor=white">
+            <img src="https://img.shields.io/badge/css3-%231572B6.svg?style=for-the-badge&logo=css3&logoColor=white">
+            <img src="https://img.shields.io/badge/javascript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E">
+            <img src="https://img.shields.io/badge/markdown-%23000000.svg?style=for-the-badge&logo=markdown&logoColor=white">
+            <img src="https://img.shields.io/badge/python-3670A0?style=for-the-badge&logo=python&logoColor=ffdd54">
+            <img src="https://img.shields.io/badge/shell_script-%23121011.svg?style=for-the-badge&logo=gnu-bash&logoColor=white">
+            <img src="https://img.shields.io/badge/Solidity-%23363636.svg?style=for-the-badge&logo=solidity&logoColor=white">
+            <img src="https://img.shields.io/badge/typescript-%23007ACC.svg?style=for-the-badge&logo=typescript&logoColor=white">
+            <br>
+            <br>
+            And frameworks and technologies such as...
+            <br>
+            <img src="https://img.shields.io/badge/docker-%230db7ed.svg?style=for-the-badge&logo=docker&logoColor=white">
+            <img src="https://img.shields.io/badge/Anaconda-%2344A833.svg?style=for-the-badge&logo=anaconda&logoColor=white">
+            <img src="https://img.shields.io/badge/django-%23092E20.svg?style=for-the-badge&logo=django&logoColor=white">
+            <img src="https://img.shields.io/badge/express.js-%23404d59.svg?style=for-the-badge&logo=express&logoColor=%2361DAFB">
+            <img src="https://img.shields.io/badge/flask-%23000.svg?style=for-the-badge&logo=flask&logoColor=white">
+            <img src="https://img.shields.io/badge/jquery-%230769AD.svg?style=for-the-badge&logo=jquery&logoColor=white">
+            <img src="https://img.shields.io/badge/NPM-%23000000.svg?style=for-the-badge&logo=npm&logoColor=white">
+            <img src="https://img.shields.io/badge/node.js-6DA55F?style=for-the-badge&logo=node.js&logoColor=white">
+            <img src="https://img.shields.io/badge/react-%2320232a.svg?style=for-the-badge&logo=react&logoColor=%2361DAFB">
+            <img src="https://img.shields.io/badge/Socket.io-black?style=for-the-badge&logo=socket.io&badgeColor=010101">
+            <img src="https://img.shields.io/badge/webpack-%238DD6F9.svg?style=for-the-badge&logo=webpack&logoColor=black">
+            <img src="https://img.shields.io/badge/yarn-%232C8EBB.svg?style=for-the-badge&logo=yarn&logoColor=white">
+            <img src="https://img.shields.io/badge/MongoDB-%234ea94b.svg?style=for-the-badge&logo=mongodb&logoColor=white">
+            <img src="https://img.shields.io/badge/postgres-%23316192.svg?style=for-the-badge&logo=postgresql&logoColor=white">
+            <br>
+            <br>
+            Using...
+            <br>
+            <img src="https://img.shields.io/badge/Visual%20Studio%20Code-0078d7.svg?style=for-the-badge&logo=visual-studio-code&logoColor=white">
+            <img src="https://img.shields.io/badge/git-%23F05033.svg?style=for-the-badge&logo=git&logoColor=white">
+            <img src="https://img.shields.io/badge/github-%23121011.svg?style=for-the-badge&logo=github&logoColor=white">
+            <img src="">
+            <img src="">
+        </div>
+    </div>
+    <div class="portfolio-sect" id="scrollbar">
+        {{#each projects}}
+            {{#if @first}}
+            <div class="card-wrapper selected">
+            {{else}}
+            <div class="card-wrapper">
+            {{/if}}
+                <h4 class="card-title">{{this.title}}</h4>
+                <img src="{{this.img}}" alt="image failed to load" class="card-image">
+            </div>
+            {{#if @first}}
+            <div class="card-blowup" id="{{this.title}}">
+            {{else}}
+            <div class="card-blowup" style="display: none;" id="{{this.title}}">
+            {{/if}}
+                <img src="{{this.img}}" alt="image failed to load" class="blowup-image">
+                <h2 class="blowup-title">{{this.title}}</h2>
+                <p>{{this.description}}</p>
+                <a href="{{this.link}}">Link</a>
+            </div>
+        {{/each}}
+    </div>
+    <div class="portfolio-sect" id="projects">
+    </div>
+</div>
+
+{{#section 'script'}}
+<script>
+    LAST_SELECTED = document.getElementsByClassName("card-wrapper")[0]
+    LAST_BLOWUP = document.getElementsByClassName("card-blowup")[0]
+    $(document).on('click', '.card-wrapper', function () {
+        LAST_SELECTED.classList.remove("selected")
+        this.classList.add("selected")
+        LAST_SELECTED = this
+        
+        blowup_id = this.getElementsByTagName("h4")[0].innerHTML
+        blowup = document.getElementById(blowup_id)
+
+        LAST_BLOWUP.style.display = "none"
+        blowup.style.display = "block"
+        LAST_BLOWUP = blowup
+    })
+</script>
+{{/section}}
+

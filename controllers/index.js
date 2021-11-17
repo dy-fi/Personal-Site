@@ -1,5 +1,7 @@
 const express = require('express');
 const nodemailer = require('nodemailer');
+const fs = require('fs');
+const path = require('path');
 
 
 // var transporter = nodemailer.createTransport({
@@ -14,6 +16,14 @@ module.exports = (app) => {
     app.get('/', (req, res) => {    
         res.render('index', {});
     });
+
+    app.get('/portfolio', (req, res) => {
+        let rawdata = fs.readFileSync(path.resolve(__dirname, '../projects.json'));
+        let projects_list = JSON.parse(rawdata);
+        let projects = projects_list.projects;
+
+        res.render('portfolio', {projects});
+    })
 
     // app.post('/email', (req, res) => {
     //     var email = req.body.email

@@ -1,0 +1,23 @@
+{
+    "projects": 
+    [
+        {
+          "title": "CodeSnatch",
+          "description": "Takes an image of code on a whiteboard or other 'irl' surfaces, converts them to machine readable text, and executes the code",
+          "link": "https://github.com/dy-fi/codesnatch",
+          "img": "../images/camera_icon.png"
+        },
+        {
+          "title": "Salvo",
+          "description": "A more efficient port scanner written in Golang",
+          "link": "https://github.com/dy-fi/salvo",
+          "img": "../images/Github-Mark.png"
+        },
+        {
+          "title": "Castway",
+          "description": "I worked with a team to build an open-source P2P web conferencing platform",
+          "link": "https://github.com/pocket-coders/castway-client",
+          "img": "../images/Github-Mark.png"
+        }
+    ]
+}

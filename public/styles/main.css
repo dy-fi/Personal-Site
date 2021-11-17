@@ -140,3 +140,88 @@ body {
     text-align: center;
 }
 
+.portfolio-wrapper {
+    background-color: #46494d;
+    position: absolute;
+    height: 94vh;
+    width: 98vw;
+    margin-top: 20px;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-around;
+    padding: 5px;
+    color: #FBFAF5;
+}
+
+.portfolio-sect {
+    flex-basis: auto;
+    padding-top: 10px;
+    height: 90vh;
+    border: 3px solid #46494d;
+    margin-top: 15px;
+    background-color: #383737;
+}
+
+#summary {
+    width: 32vw;
+    flex-grow: 4;
+    overflow: auto;
+}
+
+#summary-text-wrapper {
+    margin: 0 auto;
+    padding: 5px;
+    height: 100%;
+    width: 100%;
+    display: inline-block;
+    text-align: center;
+}
+
+#scrollbar {
+    width: 20vw;
+    flex-grow: 1;
+    /* overflow-y: scroll; */
+    padding-top: 0px;
+}
+
+#projects {
+    flex-grow: 2;
+    width: 32vw;
+}
+
+#bio-text {
+    padding: 15px;
+}
+
+.card-wrapper {
+    height: 80px;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    border-width: 2px 0px 2px 0px;
+    border-style: solid;
+    border-color: #46494d;
+    padding: 15px;
+}
+
+.card-image {
+    height: 50px;
+    width: 50px;
+}
+
+.card-blowup {
+    position: absolute;
+    right: 35px;
+    top: 40px;
+    width: 32vw;
+    justify-content: center;
+}
+
+.blowup-image {
+    width: 32vw;
+}
+
+.selected {
+    background-color: #ADD8E6;
+}
