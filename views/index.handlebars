@@ -15,9 +15,9 @@
     <div id="sticky">
         <a>Updates</a>
         <br>
-        <small styles="text-decoration: muted">v2.1.1</small>
+        <small styles="text-decoration: muted">v2.7.4</small>
         <hr>
-        <p id="sticky-text"><a>Mobile and widescreen responsive<br><br>Roadmap: <br>-Email Module<br>-Portfolio Page</p>
+        <p id="sticky-text"><a>Mobile and widescreen responsive<br><br>Roadmap: <br>-Email Module<br>-wildcard this site and host projects here</p>
         <p><span id="sticky-type" readonly></span></p>
     </div>
 </div>
@@ -36,18 +36,11 @@
             <small class="icon-label-2">Github</small>
         </a>
     </div>  
-    
     <div class="button-wrapper">
         <a href="../images/resume.pdf" download>
             <img src="../images/resume_icon.png" alt="Resume dowload link" class="icon-image" style="background-color:darkblue">
             <small class="icon-label-3">Resume.pdf</small>
         </a> 
-    </div>
-    <div class="button-wrapper">
-        <a>
-            <img src="../images/camera_icon.png" alt="Codesnatch Link" class="icon-image" style="background-color:lightgreen;">
-            <small class="icon-label-4">Coming soon</small>
-        </a>
     </div>
 </div>
 
@@ -145,7 +138,6 @@ Hey, I'm Dylan, a crazy passionate software engineer.  You can find everything y
         contact         |     Email modal\n
         portfolio       |     My personal portfolio\n
         Github          |     My personal and professional software projects on Github\n
-        about           |     About the author\n
         [[bg;#2471A3;]+ some super secret cheat codes!]
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n
 For those who aren't familiar with the terminal, just type the command you want!`
@@ -158,15 +150,8 @@ For those who aren't familiar with the terminal, just type the command you want!
         contact         |     email module\n
         portfolio       |     my personal portfolio\n
         Github          |     My personal and professional software projects on Github\n
-        about           |     About the author\n
-        + some super secret cheat codes!
+        [[bg;#2471A3;]+ some super secret cheat codes!
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n
-        `
-
-        var about = `
-Name: Dylan Finn\n
-Title: Software Engineer (specialization in backend and security)\n
-Bio: A passionate software engineer with a habit for solving tough problems.
         `
 
         function goURL(path) {
@@ -176,15 +161,11 @@ Bio: A passionate software engineer with a habit for solving tough problems.
         jQuery(function($, undefined) {
             $('#index-terminal').terminal({
                 github: function() {
-                    window.location.replace("https://github.com/dy-fi");
-                },
-
-                about: function() {
-                    this.echo(about);
+                    window.open("https://github.com/dy-fi");
                 },
     
                 portfolio: function() {
-                    this.echo("Coming soon");
+                    window.location.replace("/portfolio")
                 },
     
                 contact: function() {

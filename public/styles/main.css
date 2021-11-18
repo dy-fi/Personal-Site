@@ -6,25 +6,24 @@ body {
     background-size: cover;
 }
 
-.container {
-    position: absolute;
-}
-
 #index-terminal {
-    margin-top: -72%;
     opacity: 0.8;
     overflow: auto;
+    position: absolute;
+    left: 30px;
+    top: 60px;
 }
 
 #terminal-wrapperheader {
     background-color: slategray;
     text-align: center;
-    position: absolute;
-    margin-top: -74%;
     width: 800px;
     height: 16px;
     font-size: 12px;
     border-bottom: 2px solid gray;
+    position: absolute;
+    left: 30px;
+    top: 44px;
 }
 
 #sticky {
@@ -32,6 +31,9 @@ body {
     height: 300px;
     width: 220px;
     padding: 10px;
+    position: absolute;
+    top: 125px;
+    right: 350px;
 }
 
 #sticky-text {
@@ -39,17 +41,19 @@ body {
 }
 
 #sticky-macbar {
-    position: relative;
     background-color:#F5EC2E;
     width: 220px;
     height: 16px;
     padding: 2px;
+    position: absolute;
+    top: 110px;
+    right: 350px;
 }
 
 #sticky-wrapper {
-    position: absolute;
-    left: 80%;
-    top: 20%;
+    height: 400px;
+    width: 220px;
+
 }
 
 #flash-div {
@@ -85,19 +89,12 @@ body {
     overflow: auto;
 }
 
-#terminal-wrapper {
-    position: absolute;
-    top: 100%;
-}
-
 .icon-label-1 {
-    margin-left: 10px;
     text-align: center;
     display: block;
 }
 
 .icon-label-2 {
-    margin-left: 15px;
     text-align: center;
     display: block;
 }
@@ -107,15 +104,10 @@ body {
     text-align: center;
 }
 
-.icon-label-4 {
-    display: block;
-    margin-left: 12px;
-}
-
 .app-wrapper {
-    position: relative;
-    margin-top: 10%;
-    left: 25%;
+    position: absolute;
+    right: 90px;
+    top: 100px;
 }
 
 .app-wrapper a {
@@ -135,7 +127,6 @@ body {
 }
 
 .button-wrapper {
-    margin-left: 100%;
     padding-bottom: 25px;
     text-align: center;
 }
@@ -151,6 +142,7 @@ body {
     justify-content: space-around;
     padding: 5px;
     color: #FBFAF5;
+    left: 15px;
 }
 
 .portfolio-sect {

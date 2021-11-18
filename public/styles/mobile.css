@@ -10,18 +10,15 @@
     }
 
     #terminal-wrapper {
-        position: absolute;
         width: 100%;
-        top: 40%;
-        left: 0%;
+        height: 100%;
+        position: absolute;
+        margin-top: -12%;
+        margin-left: -12%;
     }
 
     #index-terminal {
         width: 100%;
-    }
-
-    #terminal-wrapperheader {
-        top: -7px;
     }
 
     .app-wrapper {
@@ -48,8 +45,7 @@
     }
 
     #sticky-wrapper {
-        top: 90%;
-        left: 0%;
+        display: none;
     }
 
     #sticky {
