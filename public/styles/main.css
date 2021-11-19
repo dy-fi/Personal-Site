@@ -162,7 +162,7 @@ body {
 #scrollbar {
     width: 20vw;
     flex-grow: 1;
-    overflow-y: scroll;
+    overflow-y: auto;
     padding-top: 0px;
 }
 
@@ -206,4 +206,5 @@ body {
 
 .selected {
     background-color: #ADD8E6;
+    border-right: 5px solid white;
 }
