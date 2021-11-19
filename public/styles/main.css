@@ -131,7 +131,7 @@ body {
     flex-flow: row nowrap;
     justify-content: space-around;
     padding: 5px;
-    color: #FBFAF5;
+    color: #F5F5F5;
     left: 15px;
 }
 
@@ -206,7 +206,7 @@ body {
 
 .selected {
     background-color: #ADD8E6;
-    border-right: 5px solid white;
+    border: 5px solid white;
 }
 
 #x-button {
@@ -216,8 +216,9 @@ body {
     position: absolute;
     height: 15px;
     width: 15px;
-    top: 3px;
-    left: 3px;
+    top: 4px;
+    left: 5px;
     padding: 0;
     margin: 0;
 }
+
