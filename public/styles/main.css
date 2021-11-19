@@ -89,19 +89,9 @@ body {
     overflow: auto;
 }
 
-.icon-label-1 {
+.icon-label {
     text-align: center;
     display: block;
-}
-
-.icon-label-2 {
-    text-align: center;
-    display: block;
-}
-
-.icon-label-3 {
-    display: block;
-    text-align: center;
 }
 
 .app-wrapper {
@@ -172,7 +162,7 @@ body {
 #scrollbar {
     width: 20vw;
     flex-grow: 1;
-    /* overflow-y: scroll; */
+    overflow-y: scroll;
     padding-top: 0px;
 }
 

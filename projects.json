@@ -2,21 +2,33 @@
     "projects": 
     [
         {
+          "title": "dylanfinn.dev",
+          "description": "My personal website, where you are right now!  Built using Javascript, Docker, Nginx, and lots of coffee",
+          "link": "https://dylanfinn.dev",
+          "img": "../images/personal_site.png"
+        },
+        {
           "title": "CodeSnatch",
-          "description": "Takes an image of code on a whiteboard or other 'irl' surfaces, converts them to machine readable text, and executes the code",
+          "description": "Takes an image of code on a whiteboard or other 'irl' surfaces, converts them to machine readable text, and executes the code.  Build with Node.JS and Tesseract OCR",
           "link": "https://github.com/dy-fi/codesnatch",
           "img": "../images/camera_icon.png"
         },
         {
           "title": "Salvo",
-          "description": "A more efficient port scanner written in Golang",
+          "description": "A very efficient port scanner written in Golang",
           "link": "https://github.com/dy-fi/salvo",
-          "img": "../images/Github-Mark.png"
+          "img": "https://www.emoji.co.uk/files/emoji-one/travel-places-emoji-one/1769-satellite.png"
         },
         {
           "title": "Castway",
-          "description": "I worked with a team to build an open-source P2P web conferencing platform",
+          "description": "I worked with a team as the backend lead to build an open-source P2P web conferencing platform",
           "link": "https://github.com/pocket-coders/castway-client",
+          "img": "../images/Github-Mark.png"
+        },
+        {
+          "title": "Custom-Email-Blaster",
+          "description": "I had to opportunity to help a non-profit organization, Real Options for City Kids (or R.O.C.K.) by building a robust mass emailing system",
+          "link": "https://github.com/dy-fi/Custom-Email-Lobber",
           "img": "../images/Github-Mark.png"
         }
     ]
