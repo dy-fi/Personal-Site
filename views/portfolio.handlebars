@@ -1,4 +1,5 @@
 <div class="portfolio-wrapper">
+    <a href="/"><div id="x-button"></div></a>
     <div class="portfolio-sect" id="summary">
         <div id="summary-text-wrapper">
             <h2 id="bio-title">Dylan Finn</h2>
@@ -78,6 +79,8 @@
                 <p>{{this.description}}</p>
             </div>
         {{/each}}
+        <br>
+        <h4 style="padding-left: 10%">+ more on my Github!</h4>
     </div>
     <div class="portfolio-sect" id="projects">
     </div>
@@ -87,7 +90,7 @@
 <script>
     LAST_SELECTED = document.getElementsByClassName("card-wrapper")[0]
     LAST_BLOWUP = document.getElementsByClassName("card-blowup")[0]
-    $(document).on('click', '.card-wrapper', function () {
+    $(document).on("click", ".card-wrapper", function () {
         LAST_SELECTED.classList.remove("selected")
         this.classList.add("selected")
         LAST_SELECTED = this
@@ -99,6 +102,7 @@
         blowup.style.display = "block"
         LAST_BLOWUP = blowup
     })
+        
 </script>
 {{/section}}
 

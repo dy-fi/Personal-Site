@@ -8,6 +8,12 @@
           "img": "../images/personal_site.png"
         },
         {
+            "title": "WarRoomPy",
+            "description": "A proof of concept application that allowed non-coding users to target and scrape data from anywhere on the web",
+            "link": "https://github.com/dy-fi/WarRoomPy",
+            "img": "../images/Github-Mark.png"
+        },
+        {
           "title": "CodeSnatch",
           "description": "Takes an image of code on a whiteboard or other 'irl' surfaces, converts them to machine readable text, and executes the code.  Build with Node.JS and Tesseract OCR",
           "link": "https://github.com/dy-fi/codesnatch",
