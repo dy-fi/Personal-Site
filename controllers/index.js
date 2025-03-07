@@ -1,8 +1,6 @@
-const express = require('express');
-const nodemailer = require('nodemailer');
-const fs = require('fs');
-const path = require('path');
-
+const fs = require('fs')
+const path = require('path')
+// const nodemailer = require('nodemailer')
 
 // var transporter = nodemailer.createTransport({
 //     service: '',
@@ -14,15 +12,15 @@ const path = require('path');
 module.exports = (app) => {
     // index
     app.get('/', (req, res) => {    
-        res.render('index', {});
-    });
+        res.render('index', {})
+    })
 
     app.get('/portfolio', (req, res) => {
-        let rawdata = fs.readFileSync(path.resolve(__dirname, '../projects.json'));
-        let projects_list = JSON.parse(rawdata);
-        let projects = projects_list.projects;
+        let rawdata = fs.readFileSync(path.resolve(__dirname, '../projects.json'))
+        let projects_list = JSON.parse(rawdata)
+        let projects = projects_list.projects
 
-        res.render('portfolio', {projects});
+        res.render('portfolio', {projects})
     })
 
     // app.post('/email', (req, res) => {
