@@ -1,21 +1,25 @@
-<form method="POST" action="/email">
-    <h3>Email me</h3>
+<form method="POST" action="https://api.web3forms.com/submit">
+    <!--Web3Forms key and anti-honeypot-->
+    <input type="hidden" name="access_key" value="016b22c2-d3d4-4785-a274-ca4413f62bdf">
+    <input type="checkbox" name="botcheck" class="hidden" style="display: none;">
+    <!--Form Body-->
+    <!-- <h3>Email me</h3> -->
+
     <div class="form-group">
-        <label for="name">Email</label>
-        <input class='form-control' type="text" min="6" max="200" name="email">
+        <label for="name">Your Email</label>
+        <input class='form-control' type="email" min="6" max="200" name="email">
         <small id="emailHelp" class="form-text text-muted">Your info isn't shared or saved</small>
     </div>
-
     <div class="form-group">
         <label for="subject">Subject</label>
         <input class='form-control' type="text" max="200" name="subject">
     </div>
-
     <div class="form-group">
         <label for="content">Content</label>
-        <input type="text" class='form-control' max="3000" name="content">
+        <textarea class='form-control' max="3000" name="content" rows="3"></textarea>
     </div>
-    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+
     <button type="submit" class="btn btn-primary">Send</button>
+    <!-- <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button> -->
 </form>
 

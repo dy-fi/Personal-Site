@@ -175,6 +175,14 @@ body {
     padding: 15px;
 }
 
+.modal-content {
+    background-color: darkgray;
+}
+
+.form-control {
+    border-radius: 2px;
+}
+
 .card-wrapper {
     height: 80px;
     width: 100%;

@@ -7,7 +7,7 @@
 
 <div id="terminal-wrapper" style="padding:0px;">
     <div id="terminal-wrapperheader">~~dylanfinn@Dylan's-Hackbook-Pro~~</div>
-    <div id='index-terminal'></div>
+    <div id="index-terminal"></div>
 </div>
 
 <div id="sticky-wrapper">
@@ -72,7 +72,7 @@
 
 
 {{#section 'script'}}
-    <script src='https://cdn.jsdelivr.net/npm/typed.js@2.0.9'></script>
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.9"></script>
     <script>
         dragElement(document.getElementById("terminal-wrapper"));
 
@@ -117,8 +117,8 @@
             }
         }
                     
-        var typed = new Typed('#sticky-type', {
-            stringsElement: '#sticky-text',
+        var typed = new Typed("#sticky-type", {
+            stringsElement: "#sticky-text",
             typeSpeed: 30,
             showCursor: true,
         });
@@ -176,8 +176,7 @@ For those who aren't familiar with the terminal, just type the command you want!
                 },
     
                 contact: function() {
-                    {{!-- $('#email-modal').modal('show'); --}}
-                    this.echo("Coming soon");
+                    $('#email-modal').modal('show');
                 },
 
                 help: function() {
