@@ -12,7 +12,7 @@ const path = require('path')
 module.exports = (app) => {
     // index
     app.get('/', (req, res) => {    
-        res.render('index', {})
+        res.render('index', {message: ''})
     })
 
     app.get('/portfolio', (req, res) => {

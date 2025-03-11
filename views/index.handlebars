@@ -1,75 +1,12 @@
-{{#if message}}
-    <div id="flash-div">
-        <span id="address-line">From: Server</span>
-        <p id="message-text">{{message}}</p>
-    </div>
-{{/if}}
+{{>flash-message}}
 
-<div id="terminal-wrapper" style="padding:0px;">
-    <div id="terminal-wrapperheader">~~dylanfinn@Dylan's-Hackbook-Pro~~</div>
-    <div id="index-terminal"></div>
-</div>
+{{>terminal}}
 
-<div id="sticky-wrapper">
-    <div id="sticky-macbar"></div>
-    <div id="sticky">
-        <a>Updates</a>
-        <br>
-        <small styles="text-decoration: muted">v2.7.4</small>
-        <hr>
-        <p id="sticky-text"><a>Better responsiveness and a new portfolio page!<br><br>Roadmap: <br>-Email Module<br>-wildcard this site and host projects here</p>
-        <p><span id="sticky-type" readonly></span></p>
-    </div>
-</div>
+{{>sticky}}
 
-<!-- BUTTONS -->
-<div class="app-wrapper">
-    <div class="button-wrapper">
-        <a href="https://www.linkedin.com/in/dylan-f-a36b9614b/">
-            <img src="../images/linkedin-icon.png" alt="LinkedIn profile link" class="icon-image" style="margin-top:2%;">
-            <small class="icon-label">LinkedIn</small>
-        </a>
-    </div>
-    <div class="button-wrapper">
-        <a href="https://www.github.com/dy-fi">
-            <img src="../images/GitHub-Mark.png" alt="Github profile link" class="icon-image">
-            <small class="icon-label">Github</small>
-        </a>
-    </div>  
-    <div class="button-wrapper">
-        <a href="../images/resume.pdf" download>
-            <img src="../images/resume_icon.png" alt="Resume dowload link" class="icon-image" style="background-color:darkblue">
-            <small class="icon-label">Resume.pdf</small>
-        </a> 
-    </div>
-    <div class="button-wrapper">
-        <a href="/portfolio">
-            <h3 style="color: yellow;">New!</h3>
-            <img src="../images/file-icon.png" alt="Portfolio" class="icon-images">
-            <small class="icon-label">Portfolio</small> 
-        </a>
-    </div>
-</div>
+{{>app-buttons}}
 
-<div class="modal fade" id="email-modal" tabindex="-1" role="dialog" aria-labelledby="ModalLabel" aria-hidden="true">
-    <div class="modal-dialog" role="document">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h5 class="modal-title" id="email-modal-label">Contact Me</h5>
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                <span aria-hidden="true">&times;</span>
-                </button>
-            </div>
-            <div class="modal-body">
-                {{>email-form}}
-            </div>
-            <div class="modal-footer">
-                For business inquiries only
-            </div>
-        </div>
-    </div>
-</div>
-
+{{>email-form}}
 
 {{#section 'script'}}
     <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.9"></script>
