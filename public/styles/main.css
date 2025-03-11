@@ -28,7 +28,7 @@ body {
 
 #sticky {
     background-color: yellow;
-    height: 300px;
+    height: max-content;
     width: 220px;
     padding: 10px;
     position: absolute;
