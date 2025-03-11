@@ -7,8 +7,8 @@
 
     <div class="form-group">
         <label for="name">Your Email</label>
-        <input class='form-control' type="email" min="6" max="200" name="email">
-        <small id="emailHelp" class="form-text text-muted">Your info isn't shared or saved</small>
+        <input class='form-control' type="email" min="6" max="200" name="email" required>
+        <span id="small-help"><small id="email-help" class="form-text text-muted">Your info isn't shared or saved</small></span>
     </div>
     <div class="form-group">
         <label for="subject">Subject</label>
@@ -18,8 +18,9 @@
         <label for="content">Content</label>
         <textarea class='form-control' max="3000" name="content" rows="3"></textarea>
     </div>
-
-    <button type="submit" class="btn btn-primary">Send</button>
+    <div id="submit">
+        <button type="submit" class="btn btn-primary" id="submit-button">Send</button>
+    </div>
     <!-- <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button> -->
 </form>
 
