@@ -11,6 +11,13 @@
 {{#section 'script'}}
     <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.9"></script>
     <script>
+        document.getElementById('email-button').addEventListener("click", function() {
+            console.log("fired")
+            $('#email-modal').modal('show')
+        })
+
+    </script>
+    <script>
         dragElement(document.getElementById("terminal-wrapper"));
 
         function dragElement(elmnt) {
@@ -79,8 +86,8 @@ Hey, I'm Dylan, a crazy passionate software engineer.  You can find everything y
         [[b;#33FF00;]COMMAND]             [[b;#33FF00;]Description]
         ----------------|--------------------------
         help (or h)     |     Bring this table up again\n
-        contact         |     Email modal\n
-        [[b;#e6d119;]New! ]portfolio  |     My personal portfolio\n
+        [[b;#e6d119;]New! ]contact    |     Email modal\n
+        portfolio       |     My personal portfolio\n
         Github          |     My personal and professional software projects on Github\n
         [[bg;#2471A3;]+ some super secret cheat codes!]
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n
