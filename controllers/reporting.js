@@ -37,7 +37,7 @@ module.exports = (app) => {
             writeToReportLog(req.body, res)
         } else {
             message = 'Report Log failed validation: ' + validationErrors
-            writeToReportLog(message)
+            writeToReportLog(message, res)
         }
     })
 }
