@@ -1,7 +1,7 @@
 const fs = require('fs')
 const path = require('path')
 const bodyParser = require('body-parser')
-const { check, validationResult, matchedData, body } = require('express-validator')
+// const { check, validationResult, matchedData, body } = require('express-validator')
 
 function writeToReportLog(message, res) {
     const now = new Date()
@@ -31,13 +31,13 @@ function writeToReportLog(message, res) {
 module.exports = (app) => {
 
     app.post('/reporting', bodyParser.json(), (req, res) => {
-        const validationErrors = validationResult(req.body)
+        // const validationErrors = validationResult(req.body)
 
-        if (validationErrors.isEmpty) {
+        // if (validationErrors.isEmpty) {
             writeToReportLog(req.body, res)
-        } else {
-            message = 'Report Log failed validation: ' + validationErrors
-            writeToReportLog(message, res)
-        }
+        // } else {
+        //     message = 'Report Log failed validation: ' + validationErrors
+        //     writeToReportLog(message, res)
+        // }
     })
 }
