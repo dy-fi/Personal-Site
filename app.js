@@ -34,12 +34,23 @@ app.use(express.static('public'))
 
 app.use(morgan(':status :method :url :res[content-length] - :response-time ms'))
 
-// MIDDLEWARE cors
+// MIDDLEWARE 
+// CORS
 app.use(cors())
+
+// // CONTENT SECURITY POLICY
+// app.use((req, res, next) => {
+//     res.setHeader(
+//       'Content-Security-Policy',
+//       "default-src 'self'; script-src 'self' example.com; img-src 'self' data:; style-src 'self' 'unsafe-inline'; font-src 'self' fonts.example.com;"
+//     );
+//     next();
+// });
 
 // ROUTES
 // controllers
 require('./controllers/index')(app)
+require('./controllers/reporting')(app)
 
 // START
 app.listen(port, console.log('App listening on port ' + port))

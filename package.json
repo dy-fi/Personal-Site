@@ -4,7 +4,7 @@
   "description": "Dylan Finn's personal website",
   "main": "app.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "npx eslint .",
     "start": "node app.js",
     "dev": "NODE_ENV=development node app.js"
   },
@@ -13,16 +13,16 @@
     "url": "git+https://github.com/dy-fi/Personal-Site.git"
   },
   "author": "Dylan Finn",
-  "license": "ISC",
   "bugs": {
     "url": "https://github.com/dy-fi/Personal-Site/issues"
   },
-  "homepage": "https://github.com/dy-fi/Personal-Site#readme",
+  "homepage": "dylanfinn.dev",
   "dependencies": {
     "cors": "^2.8.5",
     "dotenv": "^8.2.0",
     "express": "^4.17.1",
     "express-handlebars": "^5.3.3",
+    "express-validator": "^7.2.1",
     "morgan": "^1.10.0",
     "nodemailer": "^6.4.16",
     "serve-favicon": "^2.5.0"
