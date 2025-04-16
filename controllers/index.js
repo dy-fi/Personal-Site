@@ -6,7 +6,7 @@ module.exports = (app) => {
     app.get('/', (req, res) => {    
         res.render('index', {message: ''})
     })
-
+    // portfolio
     app.get('/portfolio', (req, res) => {
         let rawdata = fs.readFileSync(path.resolve(__dirname, '../projects.json'))
         let projects_list = JSON.parse(rawdata)
