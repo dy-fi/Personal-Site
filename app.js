@@ -6,6 +6,8 @@ const favicon = require('serve-favicon')
 const exphbs = require('express-handlebars')
 const morgan = require('morgan')
 const cors = require('cors')
+const helmet = require('helmet')
+const xss = require('xss-clean')
 
 // export/environment
 const app = express()
@@ -35,17 +37,22 @@ app.use(express.static('public'))
 app.use(morgan(':status :method :url :res[content-length] - :response-time ms'))
 
 // MIDDLEWARE 
+
 // CORS
 app.use(cors())
-
-// // CONTENT SECURITY POLICY
-// app.use((req, res, next) => {
-//     res.setHeader(
-//       'Content-Security-Policy',
-//       "default-src 'self'; script-src 'self' example.com; img-src 'self' data:; style-src 'self' 'unsafe-inline'; font-src 'self' fonts.example.com;"
-//     );
-//     next();
-// });
+// XSS sanitization and trimming
+app.use(xss())
+// HELMET CSP
+app.use(helmet.contentSecurityPolicy({
+    directives: {
+        defaultSrc: ["'self'"],
+        scriptSrc: ["'self'", 'https://code.jquery.com', 'https://cdnjs.cloudflare.com', 'https://stackpath.bootstrapcdn.com', 'https://dylanfinn.dev', 'https://unpkg.com', 'https://code.jquery.com/jquery-3.3.1.slim.min.js', 'https://cdn.jsdelivr.net', "'sha256-LLkkyZ6awYj0ueDmGAuY2sA/G/I1zmw90+cCSLi2GTE='", "'sha256-E6TLsp3X/FSYrUQa+PNgrr8ksspG6+3Ls1hedESfsas='"],
+        styleSrc: ["'self'", 'https://code.jquery.com', 'https://stackpath.bootstrapcdn.com', 'https://dylanfinn.dev', 'https://fonts.googleapis.com', 'https://cdnjs.cloudflare.com', 'https://cdn.jsdelivr.net', 'https://cdnjs.cloudflare.com/ajax/libs/jquery.terminal/2.15.1/js/jquery.terminal.min.js', "'unsafe-inline'"],
+        connectSrc: ["'self'", 'https://dylanfinn.dev'],
+        imgSrc: ["'self'", 'https://dylanfinn.dev', 'https://img.shields.io', 'https://www.emoji.co.uk'],
+        fontSrc: ["'self'", 'https://fonts.gstatic.com'],
+    },
+}))
 
 // ROUTES
 // controllers
