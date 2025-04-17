@@ -11,7 +11,7 @@
             "title": "WarRoomPy",
             "description": "A proof of concept application that allowed non-coding users to target and scrape data from anywhere on the web",
             "link": "https://github.com/dy-fi/WarRoomPy",
-            "img": "../images/Github-Mark.png"
+            "img": "../images/github-mark.png"
         },
         {
           "title": "CodeSnatch",
@@ -29,13 +29,13 @@
           "title": "Castway",
           "description": "I worked with a team as the backend lead to build an open-source P2P web conferencing platform",
           "link": "https://github.com/pocket-coders/castway-client",
-          "img": "../images/Github-Mark.png"
+          "img": "../images/github-mark.png"
         },
         {
           "title": "Custom-Email-Blaster",
           "description": "I had to opportunity to help a non-profit organization, Real Options for City Kids (or R.O.C.K.) by building a robust mass emailing system",
           "link": "https://github.com/dy-fi/Custom-Email-Lobber",
-          "img": "../images/Github-Mark.png"
+          "img": "../images/github-mark.png"
         }
     ]
 }
