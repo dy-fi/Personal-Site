@@ -14,7 +14,7 @@ body {
     top: 60px;
 }
 
-#terminal-wrapperheader {
+#terminal-wrapper-header {
     background-color: slategray;
     text-align: center;
     width: 800px;
@@ -24,6 +24,10 @@ body {
     position: absolute;
     left: 30px;
     top: 44px;
+}
+
+#terminal-wrapper {
+    padding: 0px;
 }
 
 #sticky {
@@ -179,6 +183,22 @@ body {
     cursor: pointer;
 }
 
+#contact-me-button {
+    color: white;
+}
+
+#margin-button {
+    margin-top: 2%;
+}
+
+#resume-button {
+    background-color:darkblue;
+}
+
+#new-tag {
+    color: yellow;
+}
+
 #submit {
     text-align: center;
 }
@@ -188,6 +208,10 @@ body {
     position:relative; 
     border-radius: 100px;
     background-color: rgb(65, 65, 165);
+}
+
+#sticky-version {
+    text-decoration: muted;
 }
 
 .modal-body {
@@ -235,6 +259,10 @@ body {
 .selected {
     background-color: #ADD8E6;
     border: 5px solid white;
+}
+
+.hidden {
+    display: none;
 }
 
 #x-button {
