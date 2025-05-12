@@ -1,7 +1,7 @@
 body {
     margin: 0;
     padding: 0;
-    background-color: slategrey;
+    background-color: rgb(24, 25, 25);
     background-image: url("../images/mojave_background.jpg");
     background-size: cover;
 }
@@ -124,6 +124,10 @@ body {
     text-align: center;
 }
 
+.button-wrapper:hover  {
+    text-decoration: underline;
+}
+
 .portfolio-wrapper {
     background-color: #46494d;
     position: absolute;
@@ -187,6 +191,11 @@ body {
     color: white;
 }
 
+#contact-me-button:hover {
+    text-decoration: underline;
+    cursor: pointer;
+}
+
 #margin-button {
     margin-top: 2%;
 }
@@ -197,6 +206,11 @@ body {
 
 #new-tag {
     color: yellow;
+    text-decoration: none;
+}
+
+#new-tag:hover {
+    text-decoration: none;
 }
 
 #submit {

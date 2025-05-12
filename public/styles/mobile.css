@@ -1,63 +1,96 @@
-@media screen and (max-width: 900px) {
-
-    .container {
+@media screen and (max-width: 950px) {
+    
+    body { 
+        background-repeat: no-repeat;
+        overflow: hidden;
+        box-sizing: border-box;
+        padding: 0;
+        margin: 0;
         width: 100%;
         height: 100%;
     }
 
-    body { 
-        background-repeat: no-repeat;    
+    #container {
+        width: 100%;
+        justify-content: center;
+        padding: 0;
+        margin: 0;
     }
 
     #terminal-wrapper {
+        transform: scaleX(0.72);
+        transform-origin: top left;
+        position: absolute;
         width: 100%;
         height: 100%;
-        position: absolute;
-        margin-top: -12%;
-        margin-left: -12%;
+        left: -5%;
+        top: -5%;
+        margin: 0;
+        padding: 0;
     }
 
-    #index-terminal {
-        width: 100%;
+    #terminal-wrapper-header {
+        width: 570px;
     }
 
     .app-wrapper {
-        position: absolute;
-        width: 550px;
-        height: 100%;
+        width: 100%;
         display: flex;
+        position: absolute;
         flex-direction: row;
-        flex-wrap: wrap;
-        top: 110%;
-        left: 33.5%;
-        align-content: center;
+        flex-wrap: none;
+        justify-content: center;
+        margin: 0;
+        margin-top: 72vh;
+        left: 3%;
+        border-style: groove;
+        border-color: slategray;
+        z-index: 0; 
+        backdrop-filter: blur(30px);
+        -webkit-backdrop-filter: blur(30px);
+        background-color: RGB(192, 194, 201, 0.5);
+        border-radius: 10px;
+        border-bottom-style: none;
+        padding-top: 5px;
     }
 
     .button-wrapper {
         align-content: center;
         margin: auto;
+        position: sticky;
     }
 
     .app-wrapper img {
         border-radius: 25px;
-        width: 225px;
-        height: 225px;
+        padding: 2px;
+        width: 100%;
+        height: 100px;
+    }
+
+    #new-tag {
+        display: none; 
     }
 
     #sticky-wrapper {
         display: none;
     }
 
-    #sticky {
-        width: 800px;
-        height: 200px;
-    }
-
     #sticky br {
         display: none;
     }
 
-    #sticky-macbar {
-        width: 800px;
+    #home-bar-cover {
+        display: block;
+        box-sizing: border-box;
+        width: 101%;
+        height: 3vh;
+        left: 8px;
+        bottom: 0;
+        padding: 0;
+        margin: 0;
+        margin-bottom: 0px;
+        position: absolute;
+        background-color: rgb(24, 25, 25);
+        z-index: 1;
     }
 }

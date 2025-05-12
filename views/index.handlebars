@@ -12,12 +12,12 @@
     <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.9"></script>
     <script>
         document.getElementById('email-button').addEventListener("click", function() {
-            console.log("fired")
             $('#email-modal').modal('show')
         })
-
     </script>
     <script>
+        resize();
+        window.onbeforeunload = resize();
         dragElement(document.getElementById("terminal-wrapper"));
 
         function dragElement(elmnt) {
@@ -81,18 +81,18 @@
 
         var table = `
 
-Hey, I'm Dylan, a crazy passionate software engineer.  You can find everything you need to know about\nmy work through this terminal!
+\tHey, I'm Dylan, a crazy passionate software engineer.  \n\tYou can find everything you need to know about\n\tmy work through this terminal!\n
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n
         [[b;#33FF00;]COMMAND]             [[b;#33FF00;]Description]
         ----------------|--------------------------
         help (or h)     |     Bring this table up again\n
         [[b;#e6d119;]New! ]contact    |     Email modal\n
         portfolio       |     My personal portfolio\n
-        Github          |     My personal and professional software projects on Github\n
+        Github          |     My personal and professional software projects\n
         LinkedIn        |     My LinkedIn profile\n
         [[bg;#2471A3;]+ some super secret cheat codes!]
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n
-For those who aren't familiar with the terminal, just type the command you want!`
+For those who aren't familiar with the terminal, just type the command you \nwant!`
 
         var help = `
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n
@@ -101,7 +101,7 @@ For those who aren't familiar with the terminal, just type the command you want!
         help (or h)     |     bring this table up again\n
         contact         |     email module\n
         portfolio       |     my personal portfolio\n
-        Github          |     My personal and professional software projects on Github\n
+        Github          |     My personal and professional software projects on GH\n
         LinkedIn        |     My LinkedIn profile\n
         [[bg;#2471A3;]+ some super secret cheat codes!
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n
@@ -109,6 +109,31 @@ For those who aren't familiar with the terminal, just type the command you want!
 
         function goURL(path) {
             return window.location.replace(window.location.origin + "/" + path)
+        }
+
+        function resize() {
+            const wrapper = document.getElementById("terminal-wrapper")
+            const width = wrapper.offsetWidth
+            const height = wrapper.offsetHeight
+            let tw = document.getElementById("terminal-wrapper")
+            let aw = document.getElementById("main-wrapper")
+
+            if (width < 600) {
+                if (height > 899) {
+                    tw.style.transform = "scaleX(0.77)"
+                    tw.style.top = "-5%"
+                    aw.style.left = "1.5%"
+                } else {
+                    tw.style.left = "-6%"
+                }
+
+                const ta = height*width
+                if (ta < 280001) {
+                    document.getElementById("home-bar-cover").style.display = "none"
+                }
+                return [600, 570]
+            }
+            else { return [600, 800]}
         }
 
         jQuery(function($, undefined) {
@@ -124,8 +149,16 @@ For those who aren't familiar with the terminal, just type the command you want!
                 portfolio: function() {
                     window.location.replace("/portfolio")
                 },
+
+                Portfolio: function() {
+                    window.location.replace("/portfolio")
+                },
     
                 contact: function() {
+                    $('#email-modal').modal('show');
+                },
+
+                Contact: function() {
                     $('#email-modal').modal('show');
                 },
 
@@ -141,6 +174,10 @@ For those who aren't familiar with the terminal, just type the command you want!
                     window.open("https://www.linkedin.com/in/dylan-f-a36b9614b/");
                 },
 
+                Help: function() {
+                    this.echo(help);
+                },
+
                 help: function() {
                     this.echo(help);
                 },
@@ -151,8 +188,8 @@ For those who aren't familiar with the terminal, just type the command you want!
             }, {
                 greetings: banner + "\n" + table,
                 name: 'Terminal',
-                height: 600,
-                width: 800,
+                height: resize()[0],
+                width: resize()[1],
                 prompt: '# ~> '
             })
         })
