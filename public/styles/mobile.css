@@ -18,12 +18,12 @@
     }
 
     #terminal-wrapper {
-        transform: scaleX(0.72);
+        transform: scaleX(0.65);
         transform-origin: top left;
         position: absolute;
         width: 100%;
         height: 100%;
-        left: -5%;
+        left: -4%;
         top: -5%;
         margin: 0;
         padding: 0;
@@ -41,8 +41,8 @@
         flex-wrap: none;
         justify-content: center;
         margin: 0;
-        margin-top: 72vh;
-        left: 3%;
+        margin-top: 65vh;
+        left: 0%;
         border-style: groove;
         border-color: slategray;
         z-index: 0; 
@@ -82,9 +82,9 @@
     #home-bar-cover {
         display: block;
         box-sizing: border-box;
-        width: 101%;
-        height: 3vh;
-        left: 8px;
+        width: 110%;
+        height: 6vh;
+        left: 0px;
         bottom: 0;
         padding: 0;
         margin: 0;
